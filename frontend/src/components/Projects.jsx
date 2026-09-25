@@ -44,7 +44,7 @@ const ProjectCard = ({ project, index, isMain = false }) => {
             loading="lazy"
             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#121314] via-[#121314]/50 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0a0b0c] via-[#0a0b0c]/50 to-transparent" />
           <div className="absolute bottom-4 left-5">
             <span className="slash-heading text-[10px]">
               // {project.date}
@@ -92,17 +92,17 @@ const Projects = () => {
   const gridRef = useRef(null);
 
   return (
-    <section className="deccan-section bg-[#0d0e0f]" id="projects">
+    <section className="deccan-section section-alt-bg" id="projects">
       <div className="container-section">
         <div className="mb-6">
           <span className="slash-heading">// Projects</span>
         </div>
 
-        <SplitWordHeading className="font-instrument text-[clamp(1.8rem,4vw,3rem)] font-bold text-[#F6F3F0] leading-tight mb-4">
+        <SplitWordHeading className="font-instrument text-[clamp(1.6rem,3.5vw,2.6rem)] font-bold text-[#F6F3F0] leading-[1.1] tracking-[-0.02em] mb-4">
           Building real-world AI systems from the ground up
         </SplitWordHeading>
 
-        <div className="flex items-center justify-between mb-10">
+        <div className="flex items-center justify-between mb-8">
           <p className="text-[#F6F3F0]/50 font-inter text-sm max-w-xl leading-relaxed">
             From RAG pipelines and crypto analysis agents to automated document processing — production-grade AI solutions built with modern frameworks.
           </p>
@@ -123,13 +123,13 @@ const Projects = () => {
         </div>
 
         {/* Dotted Divider */}
-        <div className="mb-10">
+        <div className="mb-8">
           <svg height="1" viewBox="0 0 1216 1" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ width: '100%' }}>
             <path opacity="0.2" d="M0 0.5H1216" stroke="#F6F3F0" strokeDasharray="4 8"></path>
           </svg>
         </div>
 
-        <div ref={gridRef} className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div ref={gridRef} className="grid grid-cols-1 md:grid-cols-3 gap-3">
           {projects.map((project, i) => (
             <ProjectCard key={project.title} project={project} index={i} isMain={true} />
           ))}

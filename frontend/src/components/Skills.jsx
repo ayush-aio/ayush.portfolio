@@ -46,7 +46,7 @@ const SkillCard = ({ skill, index }) => {
             loading="lazy"
             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#121314] via-[#121314]/40 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0c0d0e] via-[#0c0d0e]/40 to-transparent" />
         </div>
         <div className="p-6">
           <h3 className="font-instrument text-xl font-semibold text-[#F6F3F0] flex items-center gap-2">
@@ -83,12 +83,12 @@ const Skills = () => {
   return (
     <section className="deccan-section" id="skills">
       <div className="container-section">
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-12">
+        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10">
           <div>
-            <SplitWordHeading className="font-instrument text-[clamp(1.8rem,4vw,3rem)] font-bold text-[#F6F3F0] leading-tight">
+            <SplitWordHeading className="font-instrument text-[clamp(1.6rem,3.5vw,2.6rem)] font-bold text-[#F6F3F0] leading-[1.1] tracking-[-0.02em]">
               Technical Expertise
             </SplitWordHeading>
-            <SplitWordHeading className="font-instrument text-[clamp(1.8rem,4vw,3rem)] font-bold text-[#F6F3F0]/50 leading-tight">
+            <SplitWordHeading className="font-instrument text-[clamp(1.6rem,3.5vw,2.6rem)] font-bold text-[#F6F3F0]/40 leading-[1.1] tracking-[-0.02em]">
               Grounded in Research + Battle Tested
             </SplitWordHeading>
           </div>
@@ -107,7 +107,7 @@ const Skills = () => {
           </a>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
           {skills.map((skill, i) => (
             <SkillCard key={skill.category} skill={skill} index={i} />
           ))}

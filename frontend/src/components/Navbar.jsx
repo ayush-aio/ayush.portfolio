@@ -24,11 +24,11 @@ const Navbar = () => {
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           scrolled
-            ? 'bg-[#121314]/90 backdrop-blur-md border-b border-white/[0.06]'
+            ? 'bg-[#0c0d0e]/80 backdrop-blur-xl border-b border-white/[0.04]'
             : 'bg-transparent'
         }`}
       >
-        <div className="max-w-[1280px] mx-auto px-6 md:px-10 flex items-center justify-between h-[72px]">
+        <div className="max-w-[1200px] mx-auto px-8 md:px-12 flex items-center justify-between h-[68px]">
           {/* Logo */}
           <a
             href="#"
@@ -46,13 +46,13 @@ const Navbar = () => {
           </a>
 
           {/* Desktop Nav Links */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-7">
             {navLinks.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
                 onClick={(e) => scrollToSection(e, link.href)}
-                className="text-[#F6F3F0]/70 hover:text-[#F6F3F0] text-sm font-inter font-medium transition-colors duration-300"
+                className="text-[#F6F3F0]/50 hover:text-[#F6F3F0] text-[13px] font-inter font-medium transition-colors duration-300 tracking-wide"
               >
                 {link.label}
               </a>
@@ -85,7 +85,7 @@ const Navbar = () => {
 
       {/* Mobile Drawer */}
       <div
-        className={`fixed inset-0 z-[60] bg-[#121314] transition-transform duration-500 ease-out ${
+        className={`fixed inset-0 z-[60] bg-[#0c0d0e] transition-transform duration-500 ease-out ${
           mobileOpen ? 'translate-x-0' : 'translate-x-full'
         } md:hidden`}
       >

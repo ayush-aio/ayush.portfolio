@@ -35,7 +35,7 @@ const EducationSection = () => {
   return (
     <section className="deccan-section" id="education">
       <div className="container-section">
-        <SplitWordHeading className="font-instrument text-[clamp(1.8rem,4vw,3rem)] font-bold text-[#F6F3F0] leading-tight mb-10">
+        <SplitWordHeading className="font-instrument text-[clamp(1.6rem,3.5vw,2.6rem)] font-bold text-[#F6F3F0] leading-[1.1] tracking-[-0.02em] mb-8">
           Education & Certifications
         </SplitWordHeading>
 
@@ -44,7 +44,7 @@ const EducationSection = () => {
           initial={{ opacity: 0, y: 20, filter: 'blur(12px)' }}
           animate={inView ? { opacity: 1, y: 0, filter: 'blur(0px)' } : {}}
           transition={{ duration: 0.6 }}
-          className="grid grid-cols-1 md:grid-cols-2 gap-4"
+          className="grid grid-cols-1 md:grid-cols-2 gap-3"
         >
           {/* Education Card */}
           <div className="deccan-card p-8">
@@ -93,12 +93,12 @@ const EducationSection = () => {
    ============================ */
 const ContactCTA = () => {
   return (
-    <section className="deccan-section bg-[#0d0e0f]" id="contact">
-      <div className="container-section text-center py-20 md:py-32">
+    <section className="deccan-section section-alt-bg" id="contact">
+      <div className="container-section text-center py-16 md:py-24">
         <p className="font-inter text-sm text-[#F6F3F0]/50 mb-4">
           This doesn't have to end here
         </p>
-        <SplitWordHeading className="font-instrument text-[clamp(2rem,5vw,4rem)] font-bold text-[#F6F3F0] leading-tight mb-8">
+        <SplitWordHeading className="font-instrument text-[clamp(1.8rem,4.5vw,3.5rem)] font-bold text-[#F6F3F0] leading-[1.05] tracking-[-0.02em] mb-7">
           Let's Build Intelligence Together
         </SplitWordHeading>
 
@@ -136,13 +136,13 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-[#0a0a0b] border-t border-white/[0.04]">
+    <footer className="bg-[#08090a] border-t border-white/[0.03]">
       <motion.div
         ref={ref}
         initial={{ opacity: 0, y: 20, filter: 'blur(12px)' }}
         animate={inView ? { opacity: 1, y: 0, filter: 'blur(0px)' } : {}}
         transition={{ duration: 0.6 }}
-        className="max-w-[1280px] mx-auto px-6 md:px-10 py-12"
+        className="max-w-[1200px] mx-auto px-8 md:px-12 py-12"
       >
         {/* Top Row */}
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-8 mb-10">

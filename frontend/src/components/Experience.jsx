@@ -38,10 +38,10 @@ const Experience = () => {
           <span className="slash-heading">// Work Experience</span>
         </div>
 
-        <SplitWordHeading className="font-instrument text-[clamp(1.8rem,4vw,3rem)] font-bold text-[#F6F3F0] leading-tight mb-2">
+        <SplitWordHeading className="font-instrument text-[clamp(1.6rem,3.5vw,2.6rem)] font-bold text-[#F6F3F0] leading-[1.1] tracking-[-0.02em] mb-1">
           Design. Build. Deploy.
         </SplitWordHeading>
-        <SplitWordHeading className="font-instrument text-[clamp(1.8rem,4vw,3rem)] font-bold text-[#F6F3F0]/50 leading-tight mb-10">
+        <SplitWordHeading className="font-instrument text-[clamp(1.6rem,3.5vw,2.6rem)] font-bold text-[#F6F3F0]/40 leading-[1.1] tracking-[-0.02em] mb-8">
           From ideation to production-ready AI solutions.
         </SplitWordHeading>
 
@@ -50,7 +50,7 @@ const Experience = () => {
           initial={{ opacity: 0, y: 20, filter: 'blur(12px)' }}
           animate={inView ? { opacity: 1, y: 0, filter: 'blur(0px)' } : {}}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="flex items-center gap-0 bg-white/[0.03] border border-white/[0.06] rounded-sm p-1 w-fit mb-10"
+          className="flex items-center gap-0 bg-white/[0.03] border border-white/[0.05] rounded-[3px] p-1 w-fit mb-8"
         >
           {experiences.map((exp, i) => (
             <React.Fragment key={exp.id}>
