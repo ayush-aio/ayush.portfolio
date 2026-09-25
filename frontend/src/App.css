@@ -1,0 +1,192 @@
+/* =========================================
+   DECCAN.AI-INSPIRED PORTFOLIO STYLES
+   ========================================= */
+
+/* Font families */
+.font-instrument {
+  font-family: 'Instrument Sans', sans-serif;
+}
+.font-inter {
+  font-family: 'Inter', sans-serif;
+}
+.font-dm-sans {
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* App wrapper */
+.app-wrapper {
+  background-color: #121314;
+  min-height: 100vh;
+  color: #F6F3F0;
+  overflow-x: hidden;
+}
+
+/* Section base */
+.deccan-section {
+  padding: 100px 0;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .deccan-section {
+    padding: 60px 0;
+  }
+}
+
+/* Container */
+.container-section {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+@media (min-width: 768px) {
+  .container-section {
+    padding: 0 40px;
+  }
+}
+
+/* =========================================
+   BUTTON — Deccan AI Style
+   ========================================= */
+.deccan-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background-color: #F6F3F0;
+  color: #121314;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 2px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  white-space: nowrap;
+}
+
+.deccan-btn:hover {
+  background-color: #e8e5e2;
+  transform: translateY(-1px);
+}
+
+.deccan-btn:active {
+  transform: translateY(0);
+}
+
+/* =========================================
+   CARD — Deccan AI Style
+   ========================================= */
+.deccan-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(246, 243, 240, 0.06);
+  border-radius: 6px;
+  transition: border-color 0.4s ease, background-color 0.4s ease;
+}
+
+.deccan-card:hover {
+  border-color: rgba(246, 243, 240, 0.12);
+  background: rgba(255, 255, 255, 0.035);
+}
+
+/* =========================================
+   SLASH HEADING — // PREFIX LABEL
+   ========================================= */
+.slash-heading {
+  display: inline-block;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(246, 243, 240, 0.4);
+}
+
+/* =========================================
+   MARQUEE ANIMATION
+   ========================================= */
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 30s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+/* =========================================
+   DOTTED DIVIDER
+   ========================================= */
+.divider-dotted {
+  width: 100%;
+  height: 1px;
+}
+
+/* =========================================
+   SMOOTH SCROLL
+   ========================================= */
+html {
+  scroll-behavior: smooth;
+}
+
+/* =========================================
+   SCROLLBAR
+   ========================================= */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #121314;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(246, 243, 240, 0.15);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(246, 243, 240, 0.25);
+}
+
+/* =========================================
+   SELECTION
+   ========================================= */
+::selection {
+  background: rgba(246, 243, 240, 0.15);
+  color: #F6F3F0;
+}
+
+/* =========================================
+   LINK HOVER TRANSITIONS (specific only)
+   ========================================= */
+a {
+  transition: color 0.3s ease;
+}
+
+/* =========================================
+   RESPONSIVE UTILITIES
+   ========================================= */
+@media (max-width: 640px) {
+  .deccan-btn {
+    padding: 9px 16px;
+    font-size: 12px;
+  }
+}
+
+/* Blur transition for word swap */
+.duration-400 {
+  transition-duration: 400ms;
+}
