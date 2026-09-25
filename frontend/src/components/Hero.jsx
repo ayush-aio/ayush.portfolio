@@ -69,18 +69,36 @@ const Hero = () => {
     <section className="relative min-h-screen flex flex-col overflow-hidden" id="hero">
       {/* ========== BACKGROUND LAYERS ========== */}
       <div className="absolute inset-0 z-0">
-        {/* 1. Base color */}
+        {/* 0. Base color — fallback before video loads */}
         <div className="absolute inset-0 hero-bg-base" />
 
-        {/* 2. Atmospheric radial glows — depth */}
+        {/* 1. BACKGROUND VIDEO */}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+          style={{ opacity: 0.35 }}
+          src="https://customer-assets-wrfwihn1.emergentagent.net/job_ai-engineer-ayush/artifacts/1twr68rh_bg-video.mp4"
+        />
+
+        {/* 2. Dark overlay for readability */}
+        <div
+          className="absolute inset-0"
+          style={{
+            background: 'linear-gradient(to bottom, rgba(12,13,14,0.55) 0%, rgba(12,13,14,0.40) 40%, rgba(12,13,14,0.50) 70%, rgba(12,13,14,0.85) 100%)',
+          }}
+        />
+
+        {/* 3. Atmospheric radial glows — depth on top of video */}
         <div className="absolute inset-0 hero-glow-primary" />
         <div className="absolute inset-0 hero-glow-secondary" />
-        <div className="absolute inset-0 hero-glow-accent" />
 
-        {/* 3. Technical grid — fades toward edges */}
+        {/* 4. Technical grid — fades toward edges */}
         <div className="absolute inset-0 hero-grid-pattern" />
 
-        {/* 4. Extra subtle glow behind hero text area */}
+        {/* 5. Subtle glow behind hero text area */}
         <div
           className="absolute"
           style={{
@@ -88,18 +106,8 @@ const Hero = () => {
             left: '5%',
             width: '55%',
             height: '45%',
-            background: 'radial-gradient(ellipse at center, rgba(30, 50, 75, 0.12) 0%, transparent 70%)',
-            filter: 'blur(50px)',
-          }}
-        />
-
-        {/* 5. Very faint horizontal accent line */}
-        <div
-          className="absolute left-0 right-0"
-          style={{
-            top: '52%',
-            height: '1px',
-            background: 'linear-gradient(to right, transparent 5%, rgba(246,243,240,0.02) 30%, rgba(246,243,240,0.035) 50%, rgba(246,243,240,0.02) 70%, transparent 95%)',
+            background: 'radial-gradient(ellipse at center, rgba(12, 13, 14, 0.5) 0%, transparent 70%)',
+            filter: 'blur(60px)',
           }}
         />
       </div>
